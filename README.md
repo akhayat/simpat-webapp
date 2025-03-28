@@ -1,2 +1,5 @@
-# simpat-webapp
-React app for simulating patients. Hooks up to the nhanes-patient-generator backend
+To run the wepabb:
+
+```npm start```
+
+**This is a work in progress!**
