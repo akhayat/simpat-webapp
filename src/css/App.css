@@ -1,0 +1,16 @@
+ html {
+  box-sizing: border-box;
+}
+ *, *:before, *:after {
+  box-sizing: inherit;
+}
+ body {
+  background-color: rgba(252, 251, 244, 1);
+  color: rgba(0, 0, 0, 0.87);
+}
+ a {
+  color: rgba(26, 117, 255, 1);
+}
+ a:hover, a:focus {
+  color: rgba(4, 106, 56, 1);
+}
