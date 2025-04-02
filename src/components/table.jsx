@@ -1,6 +1,7 @@
 import './css/table.scss';
 import { useState, useEffect } from 'react'
 import Table from 'react-bootstrap/Table';
+import Container from 'react-bootstrap/Container';
 
 export function DataTable({dataUrl}) {
   const [table, setTable] = useState(<p>loading...</p>)
@@ -10,7 +11,7 @@ export function DataTable({dataUrl}) {
       .then((response) => response.json())
       .then((data) => {
         setTable(
-          <Table className="DataTable" striped hover>
+          <Table className="data-table" striped hover>
             <thead>
               <tr key={"header"}>
                 {Object.keys(data[0]).map((prop) => (<th key={prop}>{prop}</th>))}
@@ -30,5 +31,5 @@ export function DataTable({dataUrl}) {
       });
   }, []);
 
-  return <div className="Container">{table}</div>
+  return <Container>{table}</Container>
 }
