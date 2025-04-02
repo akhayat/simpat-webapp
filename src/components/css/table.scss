@@ -1,3 +1,4 @@
+ 
  .Container {
   margin: 5% 3%;
 }
@@ -30,7 +31,6 @@
  .DataTable thead {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
   padding: 0;
   border: 0;
   height: 1px;
@@ -129,19 +129,15 @@
  .DataTable tbody tr:last-of-type {
   margin-bottom: 0;
 }
- @media (min-width: 48em) {
-  .DataTable tbody tr:nth-of-type(even) {
-    background-color: rgba(0, 0, 0, 0.12);
-  }
-}
+
  .DataTable tbody th[scope="row"] {
   background-color: rgba(26, 117, 255, 1);
   color: white;
 }
  @media (min-width: 30em) {
   .DataTable tbody th[scope="row"] {
-    border-left: 1px solid rgba(222, 184, 33, 1);
-    border-bottom: 1px solid rgba(222, 184, 33, 1);
+    border-left: 1px solid rgba(179, 143, 0, 0.75);
+    border-bottom: 1px solid rgba(179, 143, 0, 0.75);
   }
 }
  @media (min-width: 48em) {
@@ -156,14 +152,14 @@
 }
  @media (min-width: 48em) {
   .DataTable tbody td {
-    border-left: 1px solid rgba(222, 184, 33, 1);
-    border-bottom: 1px solid rgba(222, 184, 33, 1);
+    border-left: 1px solid rgba(179, 143, 0, 0.75);
+    border-bottom: 1px solid rgba(179, 143, 0, 0.75);
     text-align: center;
   }
 }
  @media (min-width: 48em) {
   .DataTable tbody td:last-of-type {
-    border-right: 1px solid rgba(222, 184, 33, 1);
+    border-right: 1px solid rgba(179, 143, 0, 0.75);
   }
 }
  .DataTable tbody td[data-type="currency"] {

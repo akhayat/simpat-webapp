@@ -1,5 +1,6 @@
-import './css/App.css';
-import { DataTable } from './table.jsx';
+import './css/app.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { DataTable } from './components/table.jsx';
 
 function App() {
   console.log()

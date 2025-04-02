@@ -7,13 +7,16 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.3.3",
     "dotenv": "^16.4.7",
     "jquery": "^3.7.1",
     "jquery-migrate": "^3.5.2",
     "net": "^1.0.2",
     "node-polyfill-webpack-plugin": "^4.1.0",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
+    "react-router": "^7.4.1",
     "react-scripts": "^5.0.1",
     "tls": "^0.0.1",
     "web-vitals": "^2.1.4",
@@ -46,6 +49,6 @@
   "devDependencies": {
     "@types/jquery": "^3.5.32",
     "react-app-rewired": "^2.2.1",
-    "sass": "^1.86.0"
+    "sass": "^1.86.1"
   }
 }
