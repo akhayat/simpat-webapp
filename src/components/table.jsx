@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react'
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
 
-export function DataTable({dataUrl}) {
-  const [table, setTable] = useState(<p>loading...</p>)
+export function DataTable({dataUrl, searchParams}) {
+  const loading = <p>loading...</p>
+  const [table, setTable] = useState(loading)
 
   useEffect(() => {
-    fetch(dataUrl)
+    setTable(loading);
+    fetch(dataUrl + (searchParams ? "?" + searchParams : ""))
       .then((response) => response.json())
       .then((data) => {
         setTable(
@@ -18,8 +20,8 @@ export function DataTable({dataUrl}) {
               </tr>
             </thead>
             <tbody>
-              {data.map((item) => (
-                <tr key={item.TableName}>
+              {data.map((item, index) => (
+                <tr key={index}>
                   {Object.values(item).map((val, index) => (<td key={index}>{val}</td>))}
                 </tr>
               ))}
@@ -29,7 +31,7 @@ export function DataTable({dataUrl}) {
       .catch(() => {
         setTable(<p>An error occurred while fetching data</p>);
       });
-  }, []);
+  }, [dataUrl, searchParams]);
 
   return <Container>{table}</Container>
 }
