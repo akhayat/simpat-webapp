@@ -1,4 +1,3 @@
-import './css/app.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { DataTable } from './components/table.jsx';
 import { NavBarComponent } from './components/navbar.jsx';
