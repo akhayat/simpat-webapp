@@ -6,18 +6,17 @@ services:
     env_file:
       - .env.docker
     volumes:
-     - ~/.certs:/certs
+     - ${HOST_CERT_DIR}:/certs
 
   webapp: 
     image: "akhayat1/simpat-webapp"
     build: .
     ports:
      - "443:443"
-     - "3000:3000"
     env_file:
      - .env.docker
     volumes:
-      - ~/.certs:/certs
+      - ${HOST_CERT_DIR}:/certs
     depends_on: 
       - service
 
