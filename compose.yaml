@@ -16,7 +16,7 @@ services:
     env_file:
      - .env.docker
     volumes:
-      - ${HOST_CERT_DIR}:/certs
+      - "${HOST_CERT_DIR-~/.certs}:/certs"
     depends_on: 
       - service
 
